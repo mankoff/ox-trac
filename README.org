@@ -2,6 +2,7 @@
 * Table of contents                               :toc_3:noexport:
 - [[#introduction][Introduction]]
 - [[#installation][Installation]]
+- [[#usage][Usage]]
 
 * Introduction
 
@@ -19,3 +20,10 @@ Clone repository into =~/.emacs.d/manual-packages/ox-trac= and then,
 (eval-after-load "org"
   '(require 'ox-trac nil t))
 #+END_SRC
+
+* Usage
+
++ Edit an Org file
++ Invoke Org ~(org-export-dispatch)~ with =C-c C-e=
++ Select =Export to markdown= with =m=, then a =Trac= option
+  + For example, =T= to temporary buffer, highlight all, paste into Trac via web browser

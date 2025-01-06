@@ -47,11 +47,11 @@
 (org-export-define-derived-backend 'trac 'md
   :filters-alist '((:filter-parse-tree . org-md-separate-elements))
   :menu-entry
-  '(?g "Export to Trac Flavored Markdown"
-       ((?T "To temporary buffer"
+  '(?m "Export to Markdown"
+       ((?T "To temporary buffer (Trac)"
             (lambda (a s v b) (org-trac-export-as-markdown a s v)))
-        (?t "To file" (lambda (a s v b) (org-trac-export-to-markdown a s v)))
-        (?7 "To file and open"
+        (?t "To file (Trac)" (lambda (a s v b) (org-trac-export-to-markdown a s v)))
+        (?7 "To file and open (Trac)"
             (lambda (a s v b)
               (if a (org-trac-export-to-markdown t s v)
                 (org-open-file (org-trac-export-to-markdown nil s v)))))))
